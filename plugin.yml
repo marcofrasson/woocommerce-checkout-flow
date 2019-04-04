@@ -1,0 +1,17 @@
+# learn yaml: https://github.com/darvid/trine/wiki/YAML-Primer
+
+# all values here are stored in Core\Config class
+# and all are immutables (can not be overridden)
+VERSION: '1.0.0'
+NAME: 'WC Checkout Flow'
+ASSETS_DIR: 'assets'
+TEMPLATES_DIR: 'templates'
+TEXT_DOMAIN: 'wc-checkout-flow'
+
+BOILERPLATE_VERSION: '3.1.0' #delete this if you prefer
+
+# declare other values that you want
+
+# important: don't use reserved keys (they're used internally)
+# reserved keys: SLUG, PREFIX, MAIN_FILE, ROOT_DIR
+# see: https://github.com/luizbills/wp-plugin-skeleton/blob/master/src/classes/Core/Config.php#L32-L35
