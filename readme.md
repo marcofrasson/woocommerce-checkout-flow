@@ -1,13 +1,22 @@
 # WooCommerce Checkout Flow
-Contributors: marcofrasson, luizbills, juliomaraschin
-Donate link: https://goflow.digital
-Tags: checkout, register, woocommerce
-Requires at least: 4.0
-Tested up to: 5.0
-Stable tag: 1.0.1
-Requires PHP: 5.6
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+**Contributors:** marcofrasson, luizbills, juliomaraschin
+
+**Donate link:** https://goflow.digital
+
+**Tags:** checkout, register, woocommerce
+
+**Requires at least:** 4.0
+
+**Tested up to:** 5.0
+
+**Stable tag:** 1.0.1
+
+**Requires PHP:** 5.6
+
+**License:** GPLv3 or later
+
+**License URI:** http://www.gnu.org/licenses/gpl-3.0.html
 
 Add step at checkout to register or login user on WooCommerce
 
