@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 use FlowDigital\WC_Checkout_Flow\functions as h;
 
 $input_class         = get_option( 'wc_checkout_flow_input_class' );
-$submit_button_label = esc_html__( 'Continuar', 'wc-checkout-flow' );
+$submit_button_label = esc_html__( 'Continuar', 'woo-checkout-flow' );
 
 ?>
 
@@ -15,12 +15,12 @@ $submit_button_label = esc_html__( 'Continuar', 'wc-checkout-flow' );
     <noscript>
         <ul class="woocommerce-error" role="alert">
             <li>
-				<?= wc_kses_notice( __( 'O formulário abaixo não irá funciona pois ele necessita que o JavaScript do seu navegador esteja ativado.', 'wc-checkout-flow' ) ) ?>
+				<?= wc_kses_notice( __( 'O formulário abaixo não irá funciona pois ele necessita que o JavaScript do seu navegador esteja ativado.', 'woo-checkout-flow' ) ) ?>
             </li>
         </ul>
     </noscript>
 
-    <h2><?= esc_html__( 'Para finalizar sua compra informe seu e-mail', 'wc-checkout-flow' ) ?></h2>
+    <h2><?= esc_html__( 'Para finalizar sua compra informe seu e-mail', 'woo-checkout-flow' ) ?></h2>
 
     <section class="wc-checkout-flow-messages"></section>
 
@@ -28,7 +28,7 @@ $submit_button_label = esc_html__( 'Continuar', 'wc-checkout-flow' );
 
     <form action="post" class="woocommerce-form wc-checkout-flow-auth-form">
         <p class="form-row form-row-wide wc-checkout-flow-form-email">
-            <label for="email"><?= esc_html__( 'E-mail', 'wc-checkout-flow' ) ?></label>
+            <label for="email"><?= esc_html__( 'E-mail', 'woo-checkout-flow' ) ?></label>
             <input type="email"
                    class="woocommerce-Input woocommerce-Input--text input-text<?= $input_class ? ' ' . sanitize_html_class( $input_class ) : '' ?>"
                    name="email"
@@ -50,12 +50,12 @@ $submit_button_label = esc_html__( 'Continuar', 'wc-checkout-flow' );
 
     <template id="template_wc_checkout_flow_password_input">
         <p class="form-row form-row-wide wc-checkout-flow-form-email">
-            <label for="password"><?= esc_html__( 'Senha', 'wc-checkout-flow' ) ?></label>
+            <label for="password"><?= esc_html__( 'Senha', 'woo-checkout-flow' ) ?></label>
             <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password"
                    id="password" autocomplete="off" value="" required>
         </p>
         <p class="form-row form-row-wide woocommerce-LostPassword lost_password">
-            <a class="lost-password-link" href="#"><?= esc_html__( 'Perdeu sua senha?', 'wc-checkout-flow' ) ?></a>
+            <a class="lost-password-link" href="#"><?= esc_html__( 'Perdeu sua senha?', 'woo-checkout-flow' ) ?></a>
         </p>
     </template>
 

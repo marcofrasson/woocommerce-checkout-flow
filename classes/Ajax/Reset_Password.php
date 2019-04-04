@@ -22,11 +22,11 @@ class Reset_Password extends Abstract_Ajax_Action {
 		$code      = 400;
 
 		if ( ! User::email_exists( $email ) ) {
-			$res['message'] = esc_html__( 'E-mail inválido.', 'wc-checkout-flow' );
+			$res['message'] = esc_html__( 'E-mail inválido.', 'woo-checkout-flow' );
 		} elseif ( $password !== $password2 ) {
-			$res['message'] = esc_html__( 'Os campos de senha devem ter valores iguais.', 'wc-checkout-flow' );
+			$res['message'] = esc_html__( 'Os campos de senha devem ter valores iguais.', 'woo-checkout-flow' );
 		} elseif ( ! $this->is_valid_password( $password ) ) {
-			$res['message'] = esc_html__( 'Senha inválida.', 'wc-checkout-flow' );
+			$res['message'] = esc_html__( 'Senha inválida.', 'woo-checkout-flow' );
 		} else {
 			$code = 200;
 			User::change_password( $email, $password );

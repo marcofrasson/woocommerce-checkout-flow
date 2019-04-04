@@ -48,7 +48,7 @@ class Plugin_Dependencies {
 
 		if ( ! empty( $errors ) ) {
 			$margin  = \str_repeat( '&nbsp;', 4 );
-			$message .= '<br><em>' . \__( 'Follow this instructions:', 'wc-checkout-flow' ) . '</em><br>';
+			$message .= '<br><em>' . \__( 'Follow this instructions:', 'woo-checkout-flow' ) . '</em><br>';
 			$message .= $margin;
 			$message .= \implode( "<br>$margin", $errors );
 		}
@@ -61,15 +61,15 @@ class Plugin_Dependencies {
 
 		switch ( $dep ) {
 			case 'php':
-				$message = \__( 'Use PHP v7.0+', 'wc-checkout-flow' );
+				$message = \__( 'Use PHP v7.0+', 'woo-checkout-flow' );
 				break;
 
 			case 'wc':
-				$message = \__( 'Requires WooCommerce', 'wc-checkout-flow' );
+				$message = \__( 'Requires WooCommerce', 'woo-checkout-flow' );
 				break;
 
 			default:
-				$message = \__( 'Unknow dependency', 'wc-checkout-flow' );
+				$message = \__( 'Unknow dependency', 'woo-checkout-flow' );
 		}
 
 		return $message;
