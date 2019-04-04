@@ -1,0 +1,36 @@
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.wc-checkout-flow-spinner {
+    border: 8px solid #fff;
+    border-left-color: transparent;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    animation: spin 1.2s linear infinite;
+}
+
+.wc-checkout-flow-loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: opacity 0.4s linear;
+}
+
+.wc-checkout-flow-loader.show {
+    opacity: 1;
+    z-index: 999;
+    visibility: visible;
+}
