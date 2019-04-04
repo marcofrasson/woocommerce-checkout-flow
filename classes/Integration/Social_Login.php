@@ -13,7 +13,7 @@ class Social_Login {
 	}
 
 	public function print_social_login_buttons () {
-		$social_login_title = \__( 'Ou use uma das suas Redes Sociais', 'wc-checkout-flow' );
+		$social_login_title = \__( 'Ou use uma das suas Redes Sociais', 'woo-checkout-flow' );
 		$social_login_title = \apply_filters( h\prefix( 'social_login_title' ), $social_login_title );
 		$social_login_title = \esc_html( $social_login_title );
 		if ( \function_exists( 'YITH_WC_Social_Login_Frontend' ) ) {

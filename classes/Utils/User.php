@@ -92,8 +92,8 @@ class User {
 
 	public static function send_email_new_user( $username, $password, $email ) {
 		$shop_name = get_bloginfo( 'name' );
-		$title     = esc_html__( 'Seja bem-vindo', 'wc-checkout-flow' );
-		$subject   = sprintf( esc_html__( 'Sua conta em %1$s foi criada', 'wc-checkout-flow' ), esc_html( $shop_name ) );
+		$title     = esc_html__( 'Seja bem-vindo', 'woo-checkout-flow' );
+		$subject   = sprintf( esc_html__( 'Sua conta em %1$s foi criada', 'woo-checkout-flow' ), esc_html( $shop_name ) );
 		$message   = wc_get_template_html(
 			'pre-checkout/email-new-user.php',
 			[
@@ -116,8 +116,8 @@ class User {
 	public static function send_email_reset_password( $email ) {
 		$shop_name    = get_bloginfo( 'name' );
 		$user         = \get_user_by( 'email', $email );
-		$title        = esc_html__( 'Pedido de redefinição de senha', 'wc-checkout-flow' );
-		$subject      = sprintf( esc_html__( 'Pedido de redefinição de senha em %1$s', 'wc-checkout-flow' ), esc_html( $shop_name ) );
+		$title        = esc_html__( 'Pedido de redefinição de senha', 'woo-checkout-flow' );
+		$subject      = sprintf( esc_html__( 'Pedido de redefinição de senha em %1$s', 'woo-checkout-flow' ), esc_html( $shop_name ) );
 		$hash         = self::create_email_hash( $email );
 		$checkout_url = get_permalink( get_option( 'woocommerce_checkout_page_id' ) );
 

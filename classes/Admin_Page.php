@@ -20,14 +20,14 @@ class Admin_Page {
 	}
 
 	public function add_section( $sections ) {
-		$sections['wc-checkout-flow'] = __( 'WC Checkout Flow', 'wc-checkout-flow' );
+		$sections['woo-checkout-flow'] = __( 'WC Checkout Flow', 'woo-checkout-flow' );
 
 		return $sections;
 	}
 
 	public function get_settings( $settings, $current_section ) {
 		// Check the current section is what we want
-		if ( $current_section != 'wc-checkout-flow' ) {
+		if ( $current_section != 'woo-checkout-flow' ) {
 			return $settings;
 		}
 
@@ -35,85 +35,85 @@ class Admin_Page {
 
 		// Add title
 		$settings[] = array(
-			'name' => __( 'Configurações do WC Checkout Flow', 'wc-checkout-flow' ),
+			'name' => __( 'Configurações do WC Checkout Flow', 'woo-checkout-flow' ),
 			'type' => 'title',
-			'desc' => __( 'As opções a seguir são usadas para configurar o WC Checkout Flow', 'wc-checkout-flow' ),
+			'desc' => __( 'As opções a seguir são usadas para configurar o WC Checkout Flow', 'woo-checkout-flow' ),
 			'id'   => 'wc_checkout_flow'
 		);
 
 		// Add plugin options
 		$settings[] = array(
-			'name' => __( 'Mensagem da confirmação de recuperação de senha', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem da confirmação de recuperação de senha', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_lost_password',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Mensagem da confirmação de novo cadastro', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem da confirmação de novo cadastro', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_email_not_found',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Mensagem de confirmação de e-mail já cadastrado', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem de confirmação de e-mail já cadastrado', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_email_found',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Mensagem recebida por e-mail da confirmação de novo cadastro', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem recebida por e-mail da confirmação de novo cadastro', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_new_account',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Mensagem de erro ao tentar fazer login', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem de erro ao tentar fazer login', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_login_error',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Mensagem de login efetuado com sucesso', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem de login efetuado com sucesso', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_login_success',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Mensagem recebida por e-mail da solicitação de redefinição de senha', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem recebida por e-mail da solicitação de redefinição de senha', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_reset_password',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Mensagem de confirmação da redefinição de senha', 'wc-checkout-flow' ),
+			'name' => __( 'Mensagem de confirmação da redefinição de senha', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_reset_password_success',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Descrição do formulário de autenticação por e-mail', 'wc-checkout-flow' ),
+			'name' => __( 'Descrição do formulário de autenticação por e-mail', 'woo-checkout-flow' ),
 			'type' => 'textarea',
 			'id'   => 'wc_checkout_flow_auth_form_description',
 			'css'  => 'min-width: 50%; height: 75px;',
 		);
 
 		$settings[] = array(
-			'name' => __( 'Classe CSS personalizada para o campo e-mail', 'wc-checkout-flow' ),
+			'name' => __( 'Classe CSS personalizada para o campo e-mail', 'woo-checkout-flow' ),
 			'type' => 'text',
 			'id'   => 'wc_checkout_flow_input_class',
 			'css'  => 'min-width: 50%;',
 		);
 
 		$settings[] = array(
-			'title'   => __( 'Remover mensagens de confirmação', 'wc-checkout-flow' ),
+			'title'   => __( 'Remover mensagens de confirmação', 'woo-checkout-flow' ),
 			'type'    => 'checkbox',
 			'id'      => 'wc_checkout_flow_skip_messages',
 			'default' => 'no',
@@ -131,7 +131,7 @@ class Admin_Page {
 
 	public static function plugin_action_links( $links ) {
 		$plugin_links   = array();
-		$plugin_links[] = '<a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=wc-checkout-flow' ) ) . '">' . __( 'Configurações', 'wc-checkout-flow' ) . '</a>';
+		$plugin_links[] = '<a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=wc-checkout-flow' ) ) . '">' . __( 'Configurações', 'woo-checkout-flow' ) . '</a>';
 
 		return array_merge( $plugin_links, $links );
 	}

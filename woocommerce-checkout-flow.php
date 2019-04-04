@@ -6,9 +6,9 @@
  * Author:               Flow Digital Creative Ecommerce
  * Author URI:           https://goflow.digital
  * Version:              1.0.1
- * License: 						 GPLv3
- * License URI: 				 http://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:          wc-checkout-flow
+ * License: 			 GPLv3
+ * License URI: 	     http://www.gnu.org/licenses/gpl-3.0.html
+ * Text Domain:          woo-checkout-flow
  * Domain Path:          /languages
  * WC requires at least: 3.0.0
  * WC tested up to:      3.5.0

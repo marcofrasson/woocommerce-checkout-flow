@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use FlowDigital\WC_Checkout_Flow\functions as h;
 
-$link_label = esc_html__( 'Clique aqui para redefinir sua senha', 'wc-checkout-flow' );
+$link_label = esc_html__( 'Clique aqui para redefinir sua senha', 'woo-checkout-flow' );
 $link_label = \apply_filters( h\prefix( 'reset_password_link_label' ), $link_label );
 
 ?>

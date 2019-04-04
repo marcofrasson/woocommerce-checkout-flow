@@ -28,7 +28,7 @@ class Check_Email extends Abstract_Ajax_Action {
 
 			if ( \is_wp_error( $result ) ) {
 				$code           = 400;
-				$res['message'] = __( 'E-mail inválido. Por favor, tente novamente ou entre em contato conosco caso continue dando esse erro.', 'wc-checkout-flow' );
+				$res['message'] = __( 'E-mail inválido. Por favor, tente novamente ou entre em contato conosco caso continue dando esse erro.', 'woo-checkout-flow' );
 			} else {
 				$res['user_created'] = true;
 				$res['message']      = $messages['not_found'];

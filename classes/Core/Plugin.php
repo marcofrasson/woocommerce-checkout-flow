@@ -60,7 +60,7 @@ final class Plugin {
 
 	public function load_plugin_textdomain() {
 		\load_plugin_textdomain(
-			'wc-checkout-flow',
+			'woo-checkout-flow',
 			false,
 			\dirname( \plugin_basename( h\config_get( 'MAIN_FILE' ) ) ) . '/languages/'
 		);
@@ -91,7 +91,7 @@ final class Plugin {
 	}
 
 	public function print_missing_dependencies_error() {
-		$message = \__( 'Missing requirements for %1$s.', 'wc-checkout-flow' );
+		$message = \__( 'Missing requirements for %1$s.', 'woo-checkout-flow' );
 		$message = sprintf( $message, '<b>' . h\config_get( 'NAME' ) . '</b>' );
 
 		h\include_template( 'admin-notice.php', [

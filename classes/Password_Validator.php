@@ -15,7 +15,7 @@ class Password_Validator {
 
 	public function password_instructions() {
 		$min_length   = apply_filters( h\prefix( 'password_min_length' ), 8 );
-		$instructions = sprintf( esc_html__( 'Sua nova senha deve ter no mínimo %1$s caracteres.', 'wc-checkout-flow' ), $min_length );
+		$instructions = sprintf( esc_html__( 'Sua nova senha deve ter no mínimo %1$s caracteres.', 'woo-checkout-flow' ), $min_length );
 		$instructions = esc_html( apply_filters( h\prefix( 'password_min_length' ), $instructions ) );
 		echo "<p>$instructions</b>";
 	}
